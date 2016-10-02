@@ -1,0 +1,27 @@
+html
+  head
+    base(href='/')
+    meta(charset='utf-8')
+    title SysTec
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  body(ng-app='app')
+    div(layout='column', ng-cloak='', layout-fill='')
+      md-toolbar(ng-if='true')
+        .md-toolbar-tools
+          h3
+            span Sistema de Matrícula
+      md-content(flex='')
+        ui-view
+        //md-list
+          //md-list-item.md-3-line(ng-repeat='item in todos')
+          //  img.md-avatar(ng-src='{{item.face}}', alt='{{item.who}}')
+          //  .md-list-item-text
+          //    h3 {{item.what}}
+          //    h4 {{item.who}}
+          //    p
+          //      | {{item.notes}}
+          //  md-divider(inset='')
+
+
