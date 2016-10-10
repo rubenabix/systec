@@ -10,7 +10,30 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       {
         name: 'dashboard',
         url: '/',
-        component: 'sysDashboard'
+        component: 'sysDashboard',
+        resolve: {
+          curses: /** @ngInject */
+            ($stateParams,
+             $state,
+             $q,
+             sysAPI)=> {
+
+            return sysAPI.getCursesList('user', 'password')
+              .then((result)=> {
+                if (result.data) {
+                  return $q.resolve(result.data);
+                } else {
+                  console.error('error');
+                  return $q.reject({});
+                }
+              })
+              .catch((error)=> {
+                console.error(error);
+                return $q.reject({});
+              });
+
+          }
+        }
       })
 
     .state(
@@ -18,5 +41,12 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         name: 'login',
         url: '/login',
         component: 'sysLogin'
+      })
+
+    .state(
+      {
+        name: 'signIn',
+        url: '/signIn',
+        component: 'sysSignIn'
       });
 }

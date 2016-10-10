@@ -1,0 +1,47 @@
+div(layout-gt-sm='row', layout='column')
+  div(flex='')
+  div(flex-gt-sm='50')
+    form(ng-submit="", name='signInForm')
+      md-card
+        md-card-content
+          h2 Registro de carrera
+          md-content.md-no-momentum
+            md-input-container.md-icon-float.md-block
+              label Nombre
+              md-icon()
+                | person
+              input(ng-model='loginController.form.name', type='text', ng-required='true')
+
+            md-input-container.md-icon-float.md-block
+              label Apellido 1
+              md-icon()
+                | person
+              input(ng-model='loginController.form.lastName1', type='text', ng-required='true')
+
+            md-input-container.md-icon-float.md-block
+              label Apellido 2
+              md-icon()
+                | person
+              input(ng-model='loginController.form.lastName2', type='text', ng-required='true')
+
+            md-input-container.md-icon-float.md-block
+              label Correo
+              md-icon()
+                | person
+              input(ng-model='loginController.form.email', type='email', ng-required='true')
+
+            div(layout='column', layout-align='start start')
+              span Carrera a ingresar
+              md-select.md-no-underline(ng-model='armor', placeholder='-----', required='', md-no-asterisk='false')
+                md-option(value='computer') Ing. en Computación
+                md-option(value='architecture') Arquitectura y Urbanismo
+
+        md-card-actions(layout='row', layout-align='end center')
+          md-button(ui-sref='login')
+            | Regresar
+          md-button.md-primary.md-raised(ng-click="loginController.login()",
+          ng-disabled="signInForm.$invalid")
+            | Registrarse
+
+  div(flex='')
+    div()

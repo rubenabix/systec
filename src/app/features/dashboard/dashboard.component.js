@@ -11,97 +11,6 @@ class DashboardController {
 
     this.selectedCurses = {};
 
-    this.curses = [
-      {
-        label: 'Matematica general',
-        code: 'MA0101',
-        options: [
-          {
-            teacher: 'NO HAY PROFESOR ASIGNADO',
-            group: '1',
-            room: '-',
-            campus: 'Cartago',
-            schedule: {
-              label: '13:00-15:00',
-              value: ''
-            }
-          },
-          {
-            teacher: 'Montoya Poitevien Luis',
-            group: '2',
-            room: '-',
-            campus: 'San José',
-            schedule: {
-              label: '13:00-15:00',
-              value: ''
-            }
-          }
-        ]
-      },
-      {
-        label: 'Analisis de algoritmos',
-        code: 'IC3002',
-        options: [
-          {
-            teacher: 'NO HAY PROFESOR ASIGNADO',
-            group: '1',
-            room: '-',
-            campus: 'Cartago',
-            schedule: {
-              label: '13:00-15:00',
-              value: ''
-            }
-          },
-          {
-            teacher: 'Montoya Poitevien Luis',
-            group: '40',
-            room: '-',
-            campus: 'San José',
-            schedule: {
-              label: '13:00-15:00',
-              value: ''
-            }
-          }
-        ]
-      },
-      {
-        label: 'Bases de datos I',
-        code: 'IC4301',
-        options: [
-          {
-            teacher: 'Alvarez Figueroa Adriana',
-            group: '1',
-            room: '-',
-            campus: 'Cartago',
-            schedule: {
-              label: '13:00-15:00',
-              value: ''
-            }
-          },
-          {
-            teacher: 'Alvarez Figueroa Adriana',
-            group: '2',
-            room: '-',
-            campus: 'San José',
-            schedule: {
-              label: '13:00-15:00',
-              value: ''
-            }
-          },
-          {
-            teacher: 'Montoya Poitevien Luis',
-            group: '40',
-            room: '-',
-            campus: 'San José',
-            schedule: {
-              label: '13:00-15:00',
-              value: ''
-            }
-          }
-        ]
-      }
-    ];
-
   }
 
   applySelections() {
@@ -176,6 +85,9 @@ class DashboardController {
 
 export const dashboard = {
   template: require('./dashboard.template.html'),
+  bindings: {
+    curses: '<curses'
+  },
   controller: DashboardController,
   controllerAs: 'dashboardController',
   selector: 'dashboard'

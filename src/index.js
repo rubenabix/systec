@@ -9,6 +9,8 @@ import 'angular-material-icons';
 
 import {dashboard} from './app/features/dashboard/dashboard.component';
 import {login} from './app/features/login/login.component';
+import {signIn} from './app/features/signIn/signIn.component';
+import sysAPI from './app/core/api';
 
 
 import 'angular-ui-router';
@@ -25,5 +27,7 @@ angular
     'ngMdIcons'
   ])
   .config(routesConfig)
+  .service('sysAPI', sysAPI)
   .component('sysLogin', login)
+  .component('sysSignIn', signIn)
   .component('sysDashboard', dashboard);

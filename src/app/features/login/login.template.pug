@@ -15,11 +15,14 @@ div(layout-gt-sm='row', layout='column')
               label Pin
               md-icon()
                 | lock
-              input(ng-model='loginController.form.pin', type='password', ng-required='true')
+              input(ng-model='loginController.form.pin', type='password', ng-required='true',
+              md-min-length="4", md-maxlength='4')
 
         md-card-actions(layout='row', layout-align='end center')
-          md-button Registrarse
-          md-button.md-primary.md-raised(ng-click="loginController.login()")
+          md-button(ui-sref-active="active", ui-sref='signIn')
+            | Registrarse
+          md-button.md-primary.md-raised(ng-disabled="loginForm.$invalid",
+          ui-sref="dashboard({user:loginController.form.user, pin:loginController.form.pin})")
             | Ingresar
 
   div(flex='')
