@@ -1,3 +1,6 @@
+import 'timetable.js/dist/scripts/timetable.js';
+console.log();
+
 import angular from 'angular';
 
 import 'angular-material/angular-material.css';
