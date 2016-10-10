@@ -1,5 +1,5 @@
-import 'timetable.js/dist/scripts/timetable.js';
-console.log();
+import './app/vendors/timetable';
+import './app/vendors/timetablejs.css';
 
 import angular from 'angular';
 
@@ -11,6 +11,7 @@ import 'angular-material';
 import 'angular-material-icons';
 
 import {dashboard} from './app/features/dashboard/dashboard.component';
+import {schedule} from './app/features/schedule/schedule.component';
 import {login} from './app/features/login/login.component';
 import {signIn} from './app/features/signIn/signIn.component';
 import sysAPI from './app/core/api';
@@ -33,4 +34,5 @@ angular
   .service('sysAPI', sysAPI)
   .component('sysLogin', login)
   .component('sysSignIn', signIn)
-  .component('sysDashboard', dashboard);
+  .component('sysDashboard', dashboard)
+  .component('sysSchedule', schedule);

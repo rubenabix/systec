@@ -1,5 +1,5 @@
-//const root = 'https://www.juui.org';
-const root = 'http://localhost:3008';
+const root = 'https://systec.herokuapp.com';
+//const root = 'http://localhost:3008';
 
 const curses = {
   list: root + '/api/curses/v1/list'

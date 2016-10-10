@@ -1,0 +1,30 @@
+md-dialog(aria-label='curses')
+  form()
+    md-toolbar
+      .md-toolbar-tools
+        h2 Comprabante de ingreso a carrera
+        span(flex='')
+        md-button.md-icon-button(ng-click='close()')
+          md-icon()
+            | close
+
+    md-dialog-content
+      .md-dialog-content
+        div(layout = "column")
+          .md-title
+            | Estudiante: {{::details.name}}
+          h3 Usted ha sido aceptado en: {{::details.career}}
+          .md-subhead
+            | Usuario: {{::details.user}}
+          .md-subhead
+            | Pin: {{::details.pin}}
+          .md-subhead
+            | Profesor tutor: {{::details.teacher}}
+
+
+
+
+    md-dialog-actions(layout='row')
+      span(flex='')
+      md-button.md-primary(ng-click="close()", md-autofocus='')
+        | Regresar

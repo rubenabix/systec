@@ -1,18 +1,1 @@
-<div layout-gt-sm="row" layout="column"><div flex=""></div><md-divider></md-divider><div flex-gt-sm="80"><md-subheader class="md-no-sticky">Cursos disponibles</md-subheader><md-list-item ng-click="dashboardController.showCurseOptions($event, $index)" ng-repeat="curse in dashboardController.curses"><p> {{ curse.label }}</p><div class="sys-list-item-input-container"><md-input-container class="md-block" md-no-float=""><input ng-model="curse.selectedGroup" placeholder="Grupo" ng-change="dashboardController.updateGroup($index, curse.selectedGroup)"/></md-input-container></div></md-list-item><div layout="row" layout-align="end center"><span flex=""></span><md-button class="md-primary md-raised" ng-click="dashboardController.applySelections()">Aplicar</md-button></div><!--md-listmd-list-item
-  p Click anywhere to fire the secondary action
-  md-menu.md-secondary
-    md-button.md-icon-button
-      md-icon()
-        | message
-    md-menu-content(width='4')
-      md-menu-item
-        md-button
-          | Redial
-      md-menu-item
-        md-button
-          | Check voicemail
-      md-menu-divider
-      md-menu-item
-        md-button
-          | Notifications
---></div><md-divider></md-divider><div flex=""></div></div>
+<div layout-gt-sm="row" layout="column"><div flex=""></div><md-divider></md-divider><div flex-gt-sm="80"><md-subheader class="md-no-sticky">Cursos disponibles</md-subheader><md-list-item ng-click="dashboardController.showCurseOptions($event, $index)" ng-repeat="curse in dashboardController.curses"><p> {{ curse.label }}</p><div class="sys-list-item-input-container"><md-input-container class="md-block" md-no-float=""><input ng-model="curse.selectedGroup" placeholder="Grupo" ng-change="dashboardController.updateGroup($index, curse.selectedGroup)"/></md-input-container></div></md-list-item><div layout="row" layout-align="end center"><span flex=""></span><md-button class="md-primary md-raised" ui-sref="login()">Salir</md-button><md-button class="md-primary md-raised" ui-sref="schedule()">Aplicar</md-button></div></div><md-divider></md-divider><div flex=""></div></div>

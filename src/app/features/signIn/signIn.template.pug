@@ -39,7 +39,7 @@ div(layout-gt-sm='row', layout='column')
         md-card-actions(layout='row', layout-align='end center')
           md-button(ui-sref='login')
             | Regresar
-          md-button.md-primary.md-raised(ng-click="loginController.login()",
+          md-button.md-primary.md-raised(ng-click="signInController.showDetails()",
           ng-disabled="signInForm.$invalid")
             | Registrarse
 

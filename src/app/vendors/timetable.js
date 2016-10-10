@@ -228,3 +228,5 @@ Timetable.Renderer = function(tt) {
 	};
 
 })();
+
+window.Timetable = Timetable;

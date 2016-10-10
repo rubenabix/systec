@@ -11,26 +11,10 @@ div(layout-gt-sm='row', layout='column')
 
     div(layout='row', layout-align='end center')
       span(flex='')
-      md-button.md-primary.md-raised(ng-click="dashboardController.applySelections()")
+      md-button.md-primary.md-raised(ui-sref="login()")
+        | Salir
+      md-button.md-primary.md-raised(ui-sref="schedule()")
         | Aplicar
-    //md-list
-      md-list-item
-        p Click anywhere to fire the secondary action
-        md-menu.md-secondary
-          md-button.md-icon-button
-            md-icon()
-              | message
-          md-menu-content(width='4')
-            md-menu-item
-              md-button
-                | Redial
-            md-menu-item
-              md-button
-                | Check voicemail
-            md-menu-divider
-            md-menu-item
-              md-button
-                | Notifications
 
   md-divider()
   div(flex='')

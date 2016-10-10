@@ -45,6 +45,13 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
     .state(
       {
+        name: 'schedule',
+        url: '/schedule',
+        component: 'sysSchedule'
+      })
+
+    .state(
+      {
         name: 'signIn',
         url: '/signIn',
         component: 'sysSignIn'
